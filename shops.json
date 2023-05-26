@@ -1,0 +1,107 @@
+[
+  {
+    "name": "Burger Shop",
+    "products": [
+      {
+        "name": "Burger_1",
+        "img": "String",
+        "price": 10
+      },
+      {
+        "name": "Burger_2",
+        "img": "String",
+        "price": 20
+      },
+      {
+        "name": "Burger_3",
+        "img": "String",
+        "price": 30
+      },
+      {
+        "name": "Burger_4",
+        "img": "String",
+        "price": 40
+      },
+      {
+        "name": "Burger_5",
+        "img": "String",
+        "price": 50
+      },
+      {
+        "name": "Burger_6",
+        "img": "String",
+        "price": 60
+      }
+    ]
+  },
+  {
+    "name": "Pizza Shop",
+    "products": [
+      {
+        "name": "Pizza_1",
+        "img": "String",
+        "price": 10
+      },
+      {
+        "name": "Pizza_2",
+        "img": "String",
+        "price": 20
+      },
+      {
+        "name": "Pizza_3",
+        "img": "String",
+        "price": 30
+      },
+      {
+        "name": "Pizza_4",
+        "img": "String",
+        "price": 40
+      },
+      {
+        "name": "Pizza_5",
+        "img": "String",
+        "price": 50
+      },
+      {
+        "name": "Pizza_6",
+        "img": "String",
+        "price": 60
+      }
+    ]
+  },
+  {
+    "name": "Salad Shop",
+    "products": [
+      {
+        "name": "Salad_1",
+        "img": "String",
+        "price": 10
+      },
+      {
+        "name": "Salad_2",
+        "img": "String",
+        "price": 20
+      },
+      {
+        "name": "Salad_3",
+        "img": "String",
+        "price": 30
+      },
+      {
+        "name": "Salad_4",
+        "img": "String",
+        "price": 40
+      },
+      {
+        "name": "Salad_5",
+        "img": "String",
+        "price": 50
+      },
+      {
+        "name": "Salad_6",
+        "img": "String",
+        "price": 60
+      }
+    ]
+  }
+]

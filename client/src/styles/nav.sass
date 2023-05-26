@@ -1,0 +1,55 @@
+.header
+  display: flex
+  height: 50px
+  background: #ffffff
+  margin: 20px
+  border-radius: 10px
+  box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0
+  align-items: center
+  padding: 0 20px
+
+  nav
+    display: flex
+    align-items: center
+
+    a
+      margin: 0 20px
+      text-decoration: none
+      font-weight: bold
+      color: #777777
+      font-size: 15px
+      transition: 0.5s
+
+      &:hover
+        transition: 0.5s
+        text-decoration: underline
+
+        .cnt
+          background: #777777
+          color: #ffffff
+          transition: 0.3s
+
+      &.active
+        text-decoration: underline
+
+        .cnt
+          background: #777777
+          color: #ffffff
+          transition: 0.3s
+
+    .cart
+      display: flex
+      align-items: center
+
+      .cnt
+        border: 1px solid #777777
+        border-radius: 50%
+        width: 25px
+        height: 25px
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-left: 5px
+        transition: 0.3s
+
+

@@ -6,7 +6,7 @@ const app = require('../app')
 
 const {DB_HOST, PORT = 8080} = process.env;
 
-mongoose.connect('mongodb://localhost:27017/food_shop')
+mongoose.connect(DB_HOST)
   .then(()=> {
     console.log('DB connect success!')
       app.listen(PORT, () => {

@@ -1,0 +1,56 @@
+.cart-page
+  height: calc(100vh - 150px)
+  display: flex
+
+  .cart-user-block
+    background: #ffffff
+    border-radius: 10px
+    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0
+    width: 20%
+    height: 100%
+    margin: 0 20px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    padding: 20px
+
+    .user-block
+      label
+        display: flex
+        flex-direction: column
+        margin-bottom: 20px
+
+        input
+          border: 1px solid #777777
+          border-radius: 10px
+          height: 30px
+          padding-left: 10px
+
+    .total
+      font-size: 25px
+
+    .submit
+      height: 35px
+      border: 1px solid #777777
+      border-radius: 10px
+      margin-top: 20px
+      display: flex
+      align-items: center
+      justify-content: center
+      font-size: 25px
+      cursor: pointer
+      transition: 0.5s
+
+      &:hover
+        background: #777777
+        color: #ffffff
+        transition: 0.5s
+
+      &.block
+        background: #dedede
+        cursor: not-allowed
+
+        &:hover
+          background: #dedede
+          color: #000000
+

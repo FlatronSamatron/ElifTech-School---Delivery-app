@@ -1,0 +1,38 @@
+.shop-page
+  height: calc(100vh - 150px)
+  display: flex
+
+  .shops-navigation
+    background: #ffffff
+    border-radius: 10px
+    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0
+    width: 20%
+    height: 100%
+    margin: 0 20px
+    display: flex
+    flex-direction: column
+    padding: 20px
+
+    .shops-navigation-item
+      font-weight: normal
+      font-size: 20px
+      cursor: pointer
+      height: 50px
+      display: flex
+      align-items: center
+      margin-bottom: 20px
+      border-radius: 10px
+      padding: 0 10px
+      background: #777777
+      color: #ffffff
+      transition: 0.5s
+
+      &.active
+        background: #555555
+
+      &:hover
+        background: #555555
+        transition: 0.5s
+
+
+
