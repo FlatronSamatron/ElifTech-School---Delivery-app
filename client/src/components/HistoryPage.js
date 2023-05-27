@@ -4,6 +4,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
 import {changeHistoryData, fetchHistory} from "../redux/actions/histroy";
 import {changeShop} from "../redux/actions/shops";
+import {NavLink} from "react-router-dom";
 
 const HistoryPage = () => {
 
@@ -34,6 +35,15 @@ const HistoryPage = () => {
 
     if(loading){
         return <div className="loading">Loading...</div>
+    }
+
+    if(!currentData){
+        return <div className="no-orders">
+            You have no orders
+            <NavLink to="/" >
+                Buy some products
+            </NavLink>
+        </div>
     }
 
 

@@ -35,7 +35,7 @@ const CartPage = () => {
                 date: new Date(),
             }
             try {
-                await axios.post("/api/order", order);
+                await axios.post("https://flatronsamatron.onrender.com/api/order", order);
                 dispatch(changeCart([]))
             } catch (error) {
                 console.log(error)
