@@ -1,6 +1,6 @@
-# delivery-app-eliftech
+# ElifTech-School---Delivery-app
 
-Web application where users can order food delivery
+Web application for ordering food delivery
 
 # Link to the deployed project
 
