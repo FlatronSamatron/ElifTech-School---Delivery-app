@@ -8,5 +8,5 @@ Web application for ordering food delivery
 
 ### `npm dev`
 
-Starts up the server and the client.
+Starts up server and client
 
