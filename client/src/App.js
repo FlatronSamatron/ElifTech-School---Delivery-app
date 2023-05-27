@@ -3,6 +3,7 @@ import Nav from "./components/Nav";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import ShopsPage from "./components/ShopsPage";
 import CartPage from "./components/CartPage";
+import HistoryPage from "./components/HistoryPage";
 
 function App() {
 
@@ -12,7 +13,8 @@ function App() {
             <>
                 <Routes>
                     <Route path="/" element={<ShopsPage/>} />
-                    <Route path="/Cart" element={<CartPage/>} />
+                    <Route path="/cart" element={<CartPage/>} />
+                    <Route path="/history" element={<HistoryPage/>} />
                 </Routes>
             </>
         </BrowserRouter>

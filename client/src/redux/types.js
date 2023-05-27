@@ -8,3 +8,10 @@ export const shopTypes = {
 export const cartTypes = {
     CHANGE_CART: 'CHANGE_CART'
 }
+
+export const historyTypes = {
+    FETCH_HISTORY: 'FETCH_HISTORY',
+    FETCH_HISTORY_SUCCESS: 'FETCH_HISTORY_SUCCESS',
+    FETCH_HISTORY_ERROR: 'FETCH_HISTORY_ERROR',
+    CHANGE_HISTORY_DATA: 'CHANGE_HISTORY_DATA'
+}

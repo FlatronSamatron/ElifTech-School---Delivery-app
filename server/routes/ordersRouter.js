@@ -4,7 +4,7 @@ const router = express.Router();
 
 const createError = require("http-errors");
 
-const { Order, joiOrderSchema } = require("../models");
+const { Order, joiOrderSchema, Shop} = require("../models");
 
 router.post("/", async (req, res, next) => {
   const { error } = joiOrderSchema.validate(req.body);
@@ -19,6 +19,15 @@ router.post("/", async (req, res, next) => {
     if (error.message.includes("validation failed")) {
       error.status = 400;
     }
+    next(error);
+  }
+});
+
+router.get("/", async (req, res, next) => {
+  try {
+    const orders = await Order.find();
+    res.json(orders);
+  } catch (error) {
     next(error);
   }
 });

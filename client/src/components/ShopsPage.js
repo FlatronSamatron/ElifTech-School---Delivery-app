@@ -3,11 +3,14 @@ import {useEffect} from "react";
 import {changeShop, fetchShops} from "../redux/actions/shops";
 import '../styles/shopsPage.sass'
 import ShopMenu from "./ShopMenu";
+import {changeCart} from "../redux/actions/cart";
 
 const ShopsPage = () => {
-    const {error, loading, data, currentShop} = useSelector(state => {
-        return state.shops
+    const {shops: {data, currentShop}, cart: {cartData}} = useSelector(state => {
+        return state
     })
+
+    const isCartData = !!cartData.length
 
     const dispatch = useDispatch()
 
@@ -20,9 +23,15 @@ const ShopsPage = () => {
         dispatch(changeShop(newShop[0]))
     }
 
+    const onClearCart = () => {
+        dispatch(changeCart([]))
+    }
+
     const shops = data.map( ({_id, name}) => {
         const isActive = currentShop._id === _id
-        return <li className={`shops-navigation-item ${isActive ? 'active' : ''}`} key={_id} onClick={()=>onChangeShop(_id)}>
+
+        return <li className={`shops-navigation-item ${isActive ? 'active' : ''}
+            ${!isActive && isCartData ? 'block' : ''}`} key={_id} onClick={() => onChangeShop(_id)}>
             {name}
         </li>
     })
@@ -31,6 +40,7 @@ const ShopsPage = () => {
     return <div className="shop-page">
         <ul className="shops-navigation">
             {shops}
+            {isCartData && <li className="clear-cart" onClick={onClearCart}>Clear CART</li>}
         </ul>
         <ShopMenu menu={currentShop}/>
     </div>

@@ -1,7 +1,7 @@
 import {cartTypes} from '../types'
 
 const initialState = {
-    cartData: []
+    cartData: [],
 }
 
 export const cartReducer = (state = initialState, action) => {

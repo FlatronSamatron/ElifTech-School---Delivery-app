@@ -26,6 +26,14 @@ const Nav = () => {
                         {!!cnt && <div className="cnt">{cnt}</div>}
                     </NavLink>
                 </>
+
+                <>
+                    <NavLink to="/history" className={({ isActive }) =>
+                        isActive ? "cart active" : "cart"
+                    }>
+                        History
+                    </NavLink>
+                </>
             </nav>
         </header>
     );

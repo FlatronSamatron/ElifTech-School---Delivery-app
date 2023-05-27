@@ -3,7 +3,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {changeCart} from "../redux/actions/cart";
 import {NavLink} from "react-router-dom";
 
-const ShopMenu = ({menu}) => {
+const ShopMenu = ({menu, isHistory}) => {
 
     const {cartData} = useSelector(state => {
         return state.cart
@@ -33,7 +33,7 @@ const ShopMenu = ({menu}) => {
         dispatch(changeCart(filteredNewData))
     }
 
-    const menuData = menu ? menu.products : cartData
+    const menuData = menu ? (menu.products || menu) : cartData
 
     const menuList = menuData.map((item) => {
         const {name, img, price, _id} = item
@@ -42,16 +42,19 @@ const ShopMenu = ({menu}) => {
             return product._id === _id
         })[0]?.cnt
 
-        return <li className="shop-menu-item" key={_id}>
+        return <li className={`shop-menu-item ${isHistory ? 'history' : ''}`} key={_id}>
             <img src={img} alt="pic"/>
             <div className="title">{name}</div>
             <div className="price">Price: {price} $</div>
-            {!cnt ? <div className="add" onClick={() => changeProductCart(item, true)}>ADD TO CART</div> :
-                <div className="add-remove">
-                    <div className="minus" onClick={() => changeProductCart(item, false)}>-</div>
-                    <div className="cnt">{cnt}</div>
-                    <div className="plus" onClick={() => changeProductCart(item, true)}>+</div>
-                </div>}
+            {!isHistory && <>
+                {!cnt ? <div className="add" onClick={() => changeProductCart(item, true)}>ADD TO CART</div> :
+                    <div className="add-remove">
+                        <div className="minus" onClick={() => changeProductCart(item, false)}>-</div>
+                        <div className="cnt">{cnt}</div>
+                        <div className="plus" onClick={() => changeProductCart(item, true)}>+</div>
+                    </div>}
+            </>}
+            {isHistory && <div className="total">Total: {cnt}</div>}
         </li>
     })
 
