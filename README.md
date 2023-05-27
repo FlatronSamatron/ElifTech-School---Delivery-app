@@ -6,3 +6,7 @@ Web application for ordering food delivery
 
 [ElifTech-School---Delivery-app](https://food-shop-7x92.onrender.com/)
 
+### `npm dev`
+
+Starts up the server and the client
+
