@@ -51,7 +51,7 @@ const CartPage = () => {
             !/^\S+@\S+\.\S+$/.test(email) ? setEmailError('Invalid email.') : setEmailError('')
         }
         if (type === 'phone') {
-            !/\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/.test(phone) ? setPhoneError('Invalid number.') : setPhoneError('')
+            !!Number(phone) ? setPhoneError('') : setPhoneError('Invalid number.')
         }
     }
 
@@ -70,7 +70,7 @@ const CartPage = () => {
                 </label>
                 <label>
                     Phone:
-                    <input onBlur={()=>checkError('phone')} type="number" value={phone} onChange={(e)=>setPhone(e.target.value)}/>
+                    <input onBlur={()=>checkError('phone')} type="tel" value={phone} onChange={(e)=>setPhone(e.target.value)}/>
                     {phoneError && <div className="error">{phoneError}</div>}
                 </label>
                 <label>
